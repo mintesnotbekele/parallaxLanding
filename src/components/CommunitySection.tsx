@@ -16,7 +16,7 @@ export default function CommunitySection() {
   });
 
   
-  const moonX = useTransform(scrollYProgress, [0.2, 0.7], ["-50%", "910%"]);
+  const moonX = useTransform(scrollYProgress, [0.2, 0.7], ["-120%", "910%"]);
   const moonRotate = useTransform(scrollYProgress, [0, 1], ["-5deg", "5deg"]);
 
  
