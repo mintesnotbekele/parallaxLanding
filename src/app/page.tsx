@@ -9,6 +9,7 @@ import Hero from "@/components/Hero";
 import Partners from "@/components/Partners";
 import HeroSection from "@/components/SecondSection";
 import Leaderboard from "@/components/Leaderboard";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -58,7 +59,7 @@ const backgroundOpacity = useTransform(scrollY, [0, 800], [1, 0.5]);
          <Partners />
          <HeroSection />
          <Leaderboard />
-         <HeroSection />
+          <Footer />
       </div>
     </main>
   );
