@@ -15,11 +15,11 @@ export default function CommunitySection() {
     offset: ["start end", "end start"]
   });
 
-  // Moon parallax movement
+  
   const moonX = useTransform(scrollYProgress, [0.2, 0.7], ["-50%", "910%"]);
   const moonRotate = useTransform(scrollYProgress, [0, 1], ["-5deg", "5deg"]);
 
-  // Text animations
+ 
   const textOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
   const textY = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [50, 0, 0, -50]);
 
@@ -59,7 +59,7 @@ export default function CommunitySection() {
             Join our community
           </h2>
           <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 text-left">
-            Join us on our mission to to the moon & revolutionize open source AI development
+            Join us on our mission to to the moon & revolutionize open source AI development<br/>
             so that we can build a permissionless, democratized, and decentralized AI.
           </p>
           <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-left">

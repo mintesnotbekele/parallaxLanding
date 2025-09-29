@@ -68,12 +68,12 @@ export default function Leaderboard() {
  
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
-  const rawY = useTransform(scrollYProgress, [0, 1], ["60%", "-250%"]);
+  const rawY = useTransform(scrollYProgress, [0, 1], ["30%", "-250%"]);
   const y = useSpring(rawY, { stiffness: 100, damping: 20 });
 
   return (
-    <div ref={sectionRef} className="relative py-16 overflow-hidden">
-   
+   <div ref={sectionRef} className="relative py-16 overflow-hidden">
+     
       <motion.div style={{ y }} className="absolute inset-0 flex justify-center pointer-events-none">
         <div className="w-full max-w-6xl mx-auto grid grid-cols-10">
           <div className="col-span-6 flex items-center justify-center">
@@ -82,15 +82,25 @@ export default function Leaderboard() {
         </div>
       </motion.div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex items-center justify-between mb-8">
-          <motion.h2 className="text-2xl font-semibold text-white">LLM Leaderboard</motion.h2>
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+       
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 sm:mb-8">
+          <motion.h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white mb-4 sm:mb-0">
+            LLM Leaderboard
+          </motion.h2>
+          <button className="px-4 sm:px-5 py-2 sm:py-3 rounded-full font-medium text-white relative overflow-hidden transition-all duration-300 text-sm sm:text-base">
+            <span className="relative z-10">Submit Your Model</span>
+            <span className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#963488] via-[#FC6F32] to-[#FF4A59]">
+              <span className="block w-full h-full rounded-full bg-black"></span>
+            </span>
+          </button>
         </div>
 
-        <motion.div className="mx-auto max-w-12xl overflow-x-auto rounded-lg">
-          <table className="w-full table-auto relative z-10">
+        
+        <motion.div className="overflow-x-auto rounded-lg">
+          <table className="w-full table-auto min-w-[900px] md:min-w-[1000px] lg:min-w-[1200px]">
             <thead>
-              <tr className="border-b border-gray-800 text-left text-sm text-gray-400">
+              <tr className="border-b border-gray-800 text-left text-xs sm:text-sm text-gray-400">
                 <th></th>
                 <th>#</th>
                 <th>Model Name</th>
@@ -104,7 +114,7 @@ export default function Leaderboard() {
                 <th>Usage</th>
               </tr>
             </thead>
-           <tbody>
+            <tbody>
               {currentData.map((row, i) => (
                 <tr
                   key={i}
@@ -113,11 +123,11 @@ export default function Leaderboard() {
                   } hover:bg-white/20 hover:backdrop-blur-lg`}
                 >
                   {(Object.keys(row) as (keyof LeaderboardRow)[]).map((key, j) => (
-                    <td key={j} className="px-6 py-4">
+                    <td key={j} className="px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm whitespace-nowrap">
                       {key === "#" ? (
-                        <div className="flex items-center">
+                        <div className="flex items-center gap-1">
                           <Image src={getArrow(row.trend)} alt="trend" width={14} height={14} />
-                          <span className="ml-2">{row[key]}</span>
+                          <span>{row[key]}</span>
                         </div>
                       ) : key !== "trend" ? (
                         row[key]
@@ -130,16 +140,16 @@ export default function Leaderboard() {
           </table>
         </motion.div>
 
-       
-        <div className="flex justify-end gap-6 mt-6">
+        
+        <div className="flex justify-end gap-4 mt-4 sm:mt-6">
           {canGoUp && (
             <button onClick={() => setPage((p) => p - 1)}>
-              <Image src={upButton} alt="Up" width={40} height={40} />
+              <Image src={upButton} alt="Up" width={10} height={10} className="sm:w-10 sm:h-10" />
             </button>
           )}
           {canGoDown && (
             <button onClick={() => setPage((p) => p + 1)}>
-              <Image src={downButton} alt="Down" width={40} height={40} />
+              <Image src={downButton} alt="Down" width={10} height={10} className="sm:w-10 sm:h-10" />
             </button>
           )}
         </div>
