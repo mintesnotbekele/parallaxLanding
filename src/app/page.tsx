@@ -6,6 +6,8 @@ import Image from "next/image";
 import moonImage from "@/assets/halfmoon.png";
 
 import Hero from "@/components/Hero";
+import Partners from "@/components/Partners";
+import HeroSection from "@/components/SecondSection";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -52,6 +54,8 @@ const backgroundOpacity = useTransform(scrollY, [0, 800], [1, 0.5]);
     
       <div className="relative z-10">
         <Hero />
+         <Partners />
+         <HeroSection />
       </div>
     </main>
   );
