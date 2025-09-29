@@ -13,8 +13,8 @@ export default function HeroSection() {
   });
 
   
-  const starX = useTransform(scrollYProgress, [0, 1], ["-50%", "850%"]);
-  const starY = useTransform(scrollYProgress, [0, 1], ["-50%", "850%"]);
+  const starX = useTransform(scrollYProgress, [0, 1], ["-50%", "1050%"]);
+  const starY = useTransform(scrollYProgress, [0, 1], ["-50%", "1050%"]);
 
   const starRotate = useTransform(scrollYProgress, [0, 1], ["-10deg", "10deg"]);
 
@@ -35,7 +35,7 @@ export default function HeroSection() {
           rotate: starRotate,
           width: "50%",
           height: "auto",
-          top: -10,
+          top: -80,
           maxWidth: "500px",
         }}
       >
