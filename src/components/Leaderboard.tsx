@@ -83,10 +83,10 @@ export default function Leaderboard() {
   return (
    <div ref={sectionRef} className="relative py-16 overflow-hidden">
      
-      <motion.div style={{ y }} className="absolute inset-0 flex justify-center pointer-events-none">
+      <motion.div style={{ y,  zIndex: 1000 }} className="absolute inset-0 flex justify-center pointer-events-none z">
         <div className="w-full max-w-6xl mx-auto grid grid-cols-10">
           <div className="col-span-6 flex items-center justify-center">
-            <Image src={rocket} alt="Rocket" width={60} height={120} priority />
+            <Image src={rocket} alt="Rocket" width={60} height={220} priority />
           </div>
         </div>
       </motion.div>
