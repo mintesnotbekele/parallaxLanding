@@ -11,6 +11,7 @@ import HeroSection from "@/components/SecondSection";
 import Leaderboard from "@/components/Leaderboard";
 import Footer from "@/components/Footer";
 import CommunitySection from "@/components/CommunitySection";
+import CommunityParallaxText from "@/components/CommunityText";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -61,7 +62,7 @@ const backgroundOpacity = useTransform(scrollY, [0, 800], [1, 0.5]);
          <HeroSection />
          <Leaderboard />
          <CommunitySection />
-        {/* <CommunityParallaxText /> */}
+        <CommunityParallaxText />
           <Footer />
       </div>
     </main>
