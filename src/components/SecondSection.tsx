@@ -46,10 +46,10 @@ export default function HeroSection() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
           Crowdsourcing our collective <br /> intelligence to build the best AI
         </h1>
-        <p className="mt-4 sm:mt-6 text-gray-300 text-sm sm:text-base md:text-lg">
+        <p className="mt-4 sm:mt-6 font-secondary text-gray-300 text-sm sm:text-base md:text-lg">
           Open source AI has been lagging behind the likes of Google and OpenAI by billions of dollars.
         </p>
-        <p className="mt-3 sm:mt-4 text-gray-400 text-xs sm:text-sm md:text-base">
+        <p className="mt-3 sm:mt-4 font-secondary text-gray-400 text-xs sm:text-sm md:text-base">
           Salt aims to solve that by rewarding open source developers who contribute to the democratization of AI. 
           We run competitions between AI models to find and reward the best AI models. As a result, our users will be able 
           to access the latest cutting edge AI models.

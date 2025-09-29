@@ -1,17 +1,42 @@
 @import "tailwindcss";
 
+/* Theme variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* Tailwind v4 inline theme setup */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Custom font families */
+  --font-primary: "Clash Grotesk", sans-serif;
+  --font-secondary: var(--font-inter), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 
+/* Clash Grotesk (self-hosted) */
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("/fonts/clash-grotesk/ClashGrotesk-Regular.woff2") format("woff2"),
+       url("/fonts/clash-grotesk/ClashGrotesk-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("/fonts/clash-grotesk/ClashGrotesk-Bold.woff2") format("woff2"),
+       url("/fonts/clash-grotesk/ClashGrotesk-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +44,9 @@
   }
 }
 
+/* Base body styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
 }

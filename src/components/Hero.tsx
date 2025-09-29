@@ -50,7 +50,7 @@ export default function Hero() {
             mt-24 sm:mt-32
             max-w-[90%] sm:max-w-[80%] lg:max-w-[70%]
             mr-auto
-            font-[Clash Grotesk] font-medium leading-tight text-start tracking-normal
+            font-primary font-medium leading-tight text-start tracking-normal
             text-3xl sm:text-5xl md:text-6xl lg:text-7xl
             bg-gradient-to-r from-[#B53EA4] via-[#FC6F32] to-[#FF4A59]
             bg-clip-text text-transparent
@@ -63,11 +63,8 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-  className="w-full mx-4 sm:mx-8 md:mx-16 text-left text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl leading-snug"
-  style={{
-    fontFamily: "Inter, sans-serif",
-    fontWeight: 400,
-  }}
+  className="w-full font-secondary mx-4 sm:mx-8 md:mx-16 text-left text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl leading-snug"
+  
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, delay: 0.2 }}

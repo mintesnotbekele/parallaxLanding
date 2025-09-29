@@ -11,6 +11,7 @@ import downArrow from "@/assets/downarrow.png";
 import dashArrow from "@/assets/dasharrow.png";
 import downButton from "@/assets/DownButton.png"; 
 import upButton from "@/assets/UpButton.png"
+import { Metrophobic } from "next/font/google";
 
 type LeaderboardRow = {
   "#": number;
@@ -25,6 +26,14 @@ type LeaderboardRow = {
   GSM8K: number;
   Usage: string | number;
 };
+
+export const metrophobic = Metrophobic({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-metrophobic",
+  display: "swap",
+});
+
 
 export default function Leaderboard() {
 
@@ -114,11 +123,11 @@ export default function Leaderboard() {
                 <th>Usage</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className={`${metrophobic.variable} font-[var(--font-metrophobic)] `} >
             {currentData.map((row, i) => (
               <tr
                 key={i}
-                className={`text-white transition-colors ${
+                className={`text-white transition-colors font-[var(--font-metrophobic)]  ${
                   i % 2 === 0 ? "bg-transparent" : "bg-white/10 backdrop-blur-md"
                 } hover:bg-white/20 hover:backdrop-blur-lg`}
               >

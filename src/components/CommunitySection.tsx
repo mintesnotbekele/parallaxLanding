@@ -58,11 +58,11 @@ export default function CommunitySection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-left">
             Join our community
           </h2>
-          <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 text-left">
+          <p className="text-sm font-secondary sm:text-base md:text-lg mb-4 sm:mb-6 text-left">
             Join us on our mission to to the moon & revolutionize open source AI development<br/>
             so that we can build a permissionless, democratized, and decentralized AI.
           </p>
-          <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-left">
+          <p className="text-sm font-secondary sm:text-base md:text-lg mb-6 sm:mb-8 text-left">
             Let the fate of AI be in our hands and not that of big tech companies.
           </p>
 
