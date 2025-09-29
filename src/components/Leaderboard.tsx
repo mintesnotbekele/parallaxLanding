@@ -81,7 +81,7 @@ export default function Leaderboard() {
   const y = useSpring(rawY, { stiffness: 100, damping: 20 });
 
   return (
-   <div ref={sectionRef} className="relative py-16 overflow-hidden">
+   <div ref={sectionRef} className="relative  overflow-hidden">
      
       <motion.div style={{ y,  zIndex: 1000 }} className="absolute inset-0 flex justify-center pointer-events-none z">
         <div className="w-full max-w-6xl mx-auto grid grid-cols-10">
