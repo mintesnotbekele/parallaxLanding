@@ -115,28 +115,34 @@ export default function Leaderboard() {
               </tr>
             </thead>
             <tbody>
-              {currentData.map((row, i) => (
-                <tr
-                  key={i}
-                  className={`text-white transition-colors ${
-                    i % 2 === 0 ? "bg-transparent" : "bg-white/10 backdrop-blur-md"
-                  } hover:bg-white/20 hover:backdrop-blur-lg`}
-                >
-                  {(Object.keys(row) as (keyof LeaderboardRow)[]).map((key, j) => (
-                    <td key={j} className="px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm whitespace-nowrap">
-                      {key === "#" ? (
-                        <div className="flex items-center gap-1">
-                          <Image src={getArrow(row.trend)} alt="trend" width={14} height={14} />
-                          <span>{row[key]}</span>
-                        </div>
-                      ) : key !== "trend" ? (
-                        row[key]
-                      ) : null}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
+            {currentData.map((row, i) => (
+              <tr
+                key={i}
+                className={`text-white transition-colors ${
+                  i % 2 === 0 ? "bg-transparent" : "bg-white/10 backdrop-blur-md"
+                } hover:bg-white/20 hover:backdrop-blur-lg`}
+              >
+                {(Object.keys(row) as (keyof LeaderboardRow)[]).map((key, j) => (
+                  <td
+                    key={j}
+                    className={`px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm whitespace-nowrap ${
+                      key === "Model Name" ? "max-w-[150px] sm:max-w-[200px] lg:max-w-[300px] overflow-hidden truncate" : ""
+                    }`}
+                  >
+                    {key === "#" ? (
+                      <div className="flex items-center gap-1">
+                        <Image src={getArrow(row.trend)} alt="trend" width={14} height={14} />
+                        <span>{row[key]}</span>
+                      </div>
+                    ) : key !== "trend" ? (
+                      row[key]
+                    ) : null}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+
           </table>
         </motion.div>
 
