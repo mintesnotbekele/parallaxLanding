@@ -17,7 +17,7 @@ const cardVariants: Variants = {
     y: 0,
     opacity: 1,
     transition: {
-      ease: "easeOut" as const, // 👈 tell TS this is a valid easing
+      ease: "easeOut" as const,
       duration: 0.8,
     },
   },
@@ -40,10 +40,7 @@ const cardVariants: Variants = {
               className="mt-2 px-6 py-3 rounded-full font-medium text-white relative overflow-hidden transition-all duration-300 group"
             >
               <span className="relative z-10">Buy Salt AI</span>
-
-              {/* Border layer */}
-              <span className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#963488] via-[#FC6F32] to-[#FF4A59]">
-                {/* Inner background with hover effect */}
+               <span className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#963488] via-[#FC6F32] to-[#FF4A59]"> 
                 <span className="block w-full h-full rounded-full bg-black transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#963488] group-hover:via-[#FC6F32] group-hover:to-[#FF4A59]"></span>
               </span>
             </button>
@@ -51,8 +48,6 @@ const cardVariants: Variants = {
 
           </div>
         </nav>
-
-        {/* Hero Heading */}
         <motion.h1
           className="
             m-16
@@ -69,8 +64,6 @@ const cardVariants: Variants = {
         >
           A new economic primitive for funding decentralized AI
         </motion.h1>
-
-        {/* Hero Subtext */}
         <motion.p
           className="mx-16 text-gray-300 mr-auto"
           style={{
@@ -86,8 +79,6 @@ const cardVariants: Variants = {
           We track, rank and pay for the best open source decentralized LLMs to
           compete against OpenAI
         </motion.p>
-
-        {/* Hero Buttons */}
         <motion.div
           className="px-15 py-5 flex w-full flex-wrap justify-start gap-4"
           initial={{ opacity: 0, y: 20 }}
@@ -98,11 +89,8 @@ const cardVariants: Variants = {
               className="mt-2 px-6 py-3 rounded-full font-medium text-white relative overflow-hidden transition-all duration-300 group"
             >
               <span className="relative z-10">Buy Salt AI</span>
-
-              {/* Border layer */}
               <span className="absolute inset-0 rounded-full p-[2px] bg-gradient-to-r from-[#963488] via-[#FC6F32] to-[#FF4A59]">
-                {/* Inner background with hover effect */}
-                <span className="block w-full h-full rounded-full bg-black transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#963488] group-hover:via-[#FC6F32] group-hover:to-[#FF4A59]"></span>
+               <span className="block w-full h-full rounded-full bg-black transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#963488] group-hover:via-[#FC6F32] group-hover:to-[#FF4A59]"></span>
               </span>
             </button>
 
