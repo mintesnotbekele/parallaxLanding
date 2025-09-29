@@ -10,6 +10,7 @@ import Partners from "@/components/Partners";
 import HeroSection from "@/components/SecondSection";
 import Leaderboard from "@/components/Leaderboard";
 import Footer from "@/components/Footer";
+import CommunitySection from "@/components/CommunitySection";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -59,6 +60,8 @@ const backgroundOpacity = useTransform(scrollY, [0, 800], [1, 0.5]);
          <Partners />
          <HeroSection />
          <Leaderboard />
+         <CommunitySection />
+        {/* <CommunityParallaxText /> */}
           <Footer />
       </div>
     </main>
