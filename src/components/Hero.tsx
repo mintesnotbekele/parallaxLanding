@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function Hero() {
   const containerVariants = {
@@ -10,14 +10,19 @@ export default function Hero() {
     },
   };
 
-  const cardVariants = {
-    hidden: { y: 100, opacity: 0 },
-    show: {
-      y: 0,
-      opacity: 1,
-      transition: { ease: "easeOut", duration: 0.8 },
+
+const cardVariants: Variants = {
+  hidden: { y: 100, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: "easeOut" as const, // 👈 tell TS this is a valid easing
+      duration: 0.8,
     },
-  };
+  },
+};
+
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
