@@ -111,7 +111,7 @@ export default function Hero() {
           ].map((item, i) => (
             <motion.div
               key={i}
-              className="rounded-2xl px-10 sm:px-16 md:px-20 py-6 sm:py-8 text-center shadow-lg w-full sm:w-auto"
+              className="rounded-full px-10 sm:px-16 md:px-20 py-6 sm:py-8 text-center shadow-lg w-full sm:w-auto"
               variants={cardVariants}
               style={{
                 background:
